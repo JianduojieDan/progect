@@ -9,19 +9,19 @@ int main() {
 
     int result1 , result2;
 
-    cout << setw(10) << "p" << setw(10) << "p * 5" << setw(10) << "p * 10" << endl;
+    cout << left << setw(5) << "p" << right << setw(6) << "p*5" << right << setw(9) << "p*10" << endl;
 
     p=10;
 
-    cout << setw(10) << p << setw(10) << p * 5 << setw(10) << p * 10 << endl;
+    cout << left << setw(5) << p << right << setw(6) << p * 5 << right << setw(9) << p * 10 << endl;
 
     p=25;
 
-    cout << setw(10) << p << setw(10) << p * 5 << setw(10) << p * 10 << endl;
+    cout << left << setw(5) << p << right << setw(6) << p * 5 << right << setw(9) << p * 10 << endl;
 
     p=50;
 
-    cout << setw(10) << p << setw(10) << p * 5 << setw(10) << p * 10 << endl;
+    cout << left << setw(5) << p << right << setw(6) << p * 5 << right << setw(9) << p * 10 << endl;
 
 
     return 0;
