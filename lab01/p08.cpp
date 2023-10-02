@@ -4,16 +4,16 @@
 using namespace::std;
 
 int main(){
-    double pi1 = sqrt( 6 * (1 + 1/4 + 1/9 + 1/16 + 1/25));
+    double pi1 = sqrt( 6 * (1 + 1.0/4 + 1.0/9 + 1.0/16 + 1.0/25));
 
 
-    double pi2 = sqrt(6*(1 + 1/4 + 1/9 + 1/16 + 1/25 + 1/36));
+    double pi2 = sqrt(6*(1 + 1.0/4 + 1.0/9 + 1.0/16 + 1.0/25 + 1.0/36));
 
 
 
-    cout << " approximate the value of pi" << pi1 << endl;
+    cout << pi1 << endl;
 
-    cout << " approximate the value of pi" << pi2 << endl;
+    cout << pi2 << endl;
 
 
 
