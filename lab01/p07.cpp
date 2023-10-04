@@ -15,6 +15,7 @@ int main() {
     int odd9 = 17;
     int odd10 = 19;
 
+
     int sum = odd1 + odd2 + odd3 + odd4 + odd5 + odd6 + odd7 +odd8 + odd9 + odd10;
 
     cout << sum << endl;
