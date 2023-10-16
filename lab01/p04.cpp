@@ -3,7 +3,7 @@ int main (){
 
     using namespace std ;
 
- cout << " Enter the first integer : \n"  ;
+ cout << " Enter the first integer :\n"  ;
  int num1 ;
  cin >> num1 ;
 
