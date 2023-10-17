@@ -8,7 +8,7 @@ int main() {
     cout << "enter first integer :\n" ;
     cin >> n1 ;
 
-    cout << "enter second interger:\n";
+    cout << "enter second integer:\n";
     cin >>n2 ;
 
     cout << n1 << " + " << n2 << "=" << n1 + n2 << endl;

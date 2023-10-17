@@ -5,6 +5,14 @@ using namespace::std;
 
 int main() {
 
+
+//p____***p*5#####p*10
+
+
+
+
+
+
     int p = 5;
 
     int result1 , result2;
