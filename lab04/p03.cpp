@@ -8,7 +8,6 @@ int main() {
     cout << "Enter the month number (1-12): ";
     cin >> month;
     string msg;
-
     switch (month) {
         case 1:
             msg = "January";
