@@ -6,7 +6,6 @@ int main() {
     cout << "Enter the month number (1-12): ";
     cin >> month;
     string msg;
-
     if (month == 1) {
         msg = "January";
         cout << msg << endl;
