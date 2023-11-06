@@ -8,12 +8,12 @@ int main () {
     string msg;
     int z;
 
-    z = (x + y) % 7;
+
     cout << "Enter today's day: ";
     cin >> x;
     cout << "Enter the number of days elapsed since today: ";
     cin >> y;
-
+    z = (x + y) % 7;
     switch (x) {
         case 0:
             msg = "Sunday";
