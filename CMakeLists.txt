@@ -47,6 +47,12 @@ add_executable(lab04-p08 "${PROJECT_SOURCE_DIR}/lab04/p08.cpp")
 add_executable(lab04-p09 "${PROJECT_SOURCE_DIR}/lab04/p09.cpp")
 add_executable(lab04-p10 "${PROJECT_SOURCE_DIR}/lab04/p10.cpp")
 
+add_executable(lab05-p01 "${PROJECT_SOURCE_DIR}/lab05/p01.cpp")
+add_executable(lab05-p02 "${PROJECT_SOURCE_DIR}/lab05/p02.cpp")
+add_executable(lab05-p03 "${PROJECT_SOURCE_DIR}/lab05/p03.cpp")
+add_executable(lab05-p04 "${PROJECT_SOURCE_DIR}/lab05/p04.cpp")
+add_executable(lab05-p05 "${PROJECT_SOURCE_DIR}/lab05/p05.cpp")
+
 add_executable(p1000 "${PROJECT_SOURCE_DIR}/ojmid/p1000.cpp")
 add_executable(p1001 "${PROJECT_SOURCE_DIR}/ojmid/p1001.cpp")
 add_executable(p1002 "${PROJECT_SOURCE_DIR}/ojmid/p1002.cpp")
