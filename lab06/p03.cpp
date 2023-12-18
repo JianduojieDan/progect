@@ -2,7 +2,7 @@
 #include <cmath>
 
 void draw_star(unsigned int rays, float x, float y, float inner_radius, float outer_radius, Color color = WHITE, float rotation_angle = 0.0f) {
-    Vector2 starPoints[10]; // Each star has 5 points (2 per ray)
+    Vector2 starPoints[10];
 
     for (unsigned int i = 0; i < rays * 2; i += 2) {
         float angle1 = 2.0f * PI * i / (rays * 2) + rotation_angle;
@@ -12,7 +12,6 @@ void draw_star(unsigned int rays, float x, float y, float inner_radius, float ou
         starPoints[rays + i / 2] = { x + static_cast<float>(inner_radius * cos(angle2)), y + static_cast<float>(inner_radius * sin(angle2)) };
     }
 
-    // Draw the star using filled triangles
     for (unsigned int i = 0; i < rays; ++i) {
         int next = (i + 1) % rays;
         DrawTriangle({x, y}, starPoints[i], starPoints[next], color);
