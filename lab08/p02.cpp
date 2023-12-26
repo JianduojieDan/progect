@@ -5,6 +5,7 @@ int main(){
     const int NUMBER_OF_STUDENTS = 8;
     const int NUMBER_OF_QUESTIONS = 10;
 
+
     char ans[NUMBER_OF_STUDENTS][NUMBER_OF_QUESTIONS]={
             {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
             {'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'},
