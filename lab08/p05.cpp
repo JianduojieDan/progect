@@ -5,6 +5,7 @@ const int NUMBER_OF_DAYS = 10;
 const int NUMBER_OF_HOURS = 24;
 double temperatureHumidityData[NUMBER_OF_DAYS][NUMBER_OF_HOURS][2];
 
+
 int main()
 {
     int day, hour;
