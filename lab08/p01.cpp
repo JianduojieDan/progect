@@ -13,6 +13,7 @@ int sum (const int a[][COLOUM_SIZE] , int rowSize){
     return total;
 }
 
+
 int main(){
     const int ROW_SIZE = 3;
     int m[ROW_SIZE][COLOUM_SIZE];
