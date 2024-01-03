@@ -85,6 +85,13 @@ add_executable(lab07-p08 "${PROJECT_SOURCE_DIR}/lab07/p08.cpp")
 add_executable(lab07-p09 "${PROJECT_SOURCE_DIR}/lab07/p09.cpp")
 add_executable(lab07-p10 "${PROJECT_SOURCE_DIR}/lab07/p10.cpp")
 
+#lab08
+add_executable(lab08-p01 "${PROJECT_SOURCE_DIR}/lab08/p01.cpp")
+add_executable(lab08-p02 "${PROJECT_SOURCE_DIR}/lab08/p02.cpp")
+add_executable(lab08-p03 "${PROJECT_SOURCE_DIR}/lab08/p03.cpp")
+add_executable(lab08-p04 "${PROJECT_SOURCE_DIR}/lab08/p04.cpp")
+add_executable(lab08-p05 "${PROJECT_SOURCE_DIR}/lab08/p05.cpp")
+
 
 #ojmid
 add_executable(p1000 "${PROJECT_SOURCE_DIR}/ojmid/p1000.cpp")
@@ -143,3 +150,42 @@ add_executable(p1076 "${PROJECT_SOURCE_DIR}/ojmid/p1076.cpp")
 add_executable(p1077 "${PROJECT_SOURCE_DIR}/ojmid/p1077.cpp")
 add_executable(p1078 "${PROJECT_SOURCE_DIR}/ojmid/p1078.cpp")
 add_executable(p1079 "${PROJECT_SOURCE_DIR}/ojmid/p1079.cpp")
+
+add_executable(p1172 "${PROJECT_SOURCE_DIR}/ojmid/p1172.cpp")
+add_executable(p1173 "${PROJECT_SOURCE_DIR}/ojmid/p1173.cpp")
+add_executable(p1174 "${PROJECT_SOURCE_DIR}/ojmid/p1174.cpp")
+add_executable(p1175 "${PROJECT_SOURCE_DIR}/ojmid/p1175.cpp")
+add_executable(p1176 "${PROJECT_SOURCE_DIR}/ojmid/p1176.cpp")
+add_executable(p1177 "${PROJECT_SOURCE_DIR}/ojmid/p1177.cpp")
+add_executable(p1178 "${PROJECT_SOURCE_DIR}/ojmid/p1178.cpp")
+add_executable(p1179 "${PROJECT_SOURCE_DIR}/ojmid/p1179.cpp")
+add_executable(p1180 "${PROJECT_SOURCE_DIR}/ojmid/p1180.cpp")
+add_executable(p1181 "${PROJECT_SOURCE_DIR}/ojmid/p1181.cpp")
+add_executable(p1182 "${PROJECT_SOURCE_DIR}/ojmid/p1182.cpp")
+add_executable(p1183 "${PROJECT_SOURCE_DIR}/ojmid/p1183.cpp")
+add_executable(p1184 "${PROJECT_SOURCE_DIR}/ojmid/p1184.cpp")
+add_executable(p1185 "${PROJECT_SOURCE_DIR}/ojmid/p1185.cpp")
+add_executable(p1186 "${PROJECT_SOURCE_DIR}/ojmid/p1186.cpp")
+add_executable(p1187 "${PROJECT_SOURCE_DIR}/ojmid/p1187.cpp")
+add_executable(p1188 "${PROJECT_SOURCE_DIR}/ojmid/p1188.cpp")
+add_executable(p1189 "${PROJECT_SOURCE_DIR}/ojmid/p1189.cpp")
+add_executable(p1190 "${PROJECT_SOURCE_DIR}/ojmid/p1190.cpp")
+add_executable(p1435 "${PROJECT_SOURCE_DIR}/ojmid/p1435.cpp")
+add_executable(p1478 "${PROJECT_SOURCE_DIR}/ojmid/p1478.cpp")
+
+#projects
+add_executable(
+        projects-dungeon
+        "${PROJECT_SOURCE_DIR}/projects/dungeon.cpp"
+        "${PROJECT_SOURCE_DIR}/projects/globals.h"
+        "${PROJECT_SOURCE_DIR}/projects/graphics.h"
+        "${PROJECT_SOURCE_DIR}/projects/images.h"
+        "${PROJECT_SOURCE_DIR}/projects/utilities.h"
+        "${PROJECT_SOURCE_DIR}/projects/levels.h"
+
+)
+target_link_libraries(projects-dungeon PRIVATE raylib)
+
+
+
+
