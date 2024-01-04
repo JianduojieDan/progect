@@ -5,6 +5,7 @@
 #include "images.h"
 #include "levels.h"
 #include "sound.h"
+#include "music.h"
 // TODO
 
 void update_game() {
@@ -26,7 +27,8 @@ void update_game() {
                 move_player(1, 0);
             } else if (IsKeyPressed(KEY_ESCAPE)) {
                 game_state = PAUSED_STATE;
-            }
+            }else if  (IsKeyPressed(KEY_B)) {
+                game_state = LOSE_STATE;
             break;
         case PAUSED_STATE:
             if (IsKeyPressed(KEY_ESCAPE)) {
@@ -39,6 +41,15 @@ void update_game() {
                 game_state = MENU_STATE;
             }
             break;
+        case LOSE_STATE:
+            SetExitKey(KEY_ESCAPE);
+            if (IsKeyPressed(KEY_B)) {
+                game_state = LOSE_STATE;
+            } else if (IsKeyPressed(KEY_ENTER)){
+                game_state = MENU_STATE;
+            }
+            break;
+    }
     }
 }
 
@@ -60,9 +71,11 @@ void draw_game() {
         case VICTORY_STATE:
             draw_victory_menu();
             break;
+        case LOSE_STATE:
+            draw_lose_menu();
+            break;
     }
 }
-
 
 int main() {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT);
@@ -72,10 +85,17 @@ int main() {
     load_fonts();
     load_images();
     load_sound();
+    load_music();
     load_next_level();
+
+    Music music = LoadMusicStream("../projects/data/music/8bit-music-for-game-68698.wav");
+
+    PlayMusicStream(music);
 
     while (!WindowShouldClose()) {
         BeginDrawing();
+
+        UpdateMusicStream(music);
 
         update_game();
         draw_game();
@@ -85,6 +105,7 @@ int main() {
 
     unload_fonts();
     unload_images();
+    UnloadMusicStream(music);
 
     return 0;
 }
