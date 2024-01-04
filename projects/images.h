@@ -16,6 +16,7 @@ void unload_fonts() {
     UnloadFont(menu_font);
 }
 
+
 void load_images() {
     std::cout << GetWorkingDirectory();
     std::cout << GetApplicationDirectory();

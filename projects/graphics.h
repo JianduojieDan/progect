@@ -105,6 +105,9 @@ void draw_player() {
     draw_sprite(player_sprite, x, y, cell_size);
 }
 
+
+//TODO enemy
+
 void draw_pause_menu() {
     ClearBackground(BLACK);
 

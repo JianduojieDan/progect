@@ -4,6 +4,7 @@
 #include "player.h"
 #include "images.h"
 #include "levels.h"
+#include "sound.h"
 // TODO
 
 void update_game() {
@@ -66,8 +67,10 @@ int main() {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT);
     InitWindow(2000, 1600, "Dungeon");
     SetTargetFPS(60);
+    InitAudioDevice();
     load_fonts();
     load_images();
+    load_sound();
     load_next_level();
 
     while (!WindowShouldClose()) {
@@ -75,7 +78,6 @@ int main() {
 
         update_game();
         draw_game();
-
         EndDrawing();
     }
     CloseWindow();

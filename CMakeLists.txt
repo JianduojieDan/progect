@@ -182,6 +182,7 @@ add_executable(
         "${PROJECT_SOURCE_DIR}/projects/images.h"
         "${PROJECT_SOURCE_DIR}/projects/utilities.h"
         "${PROJECT_SOURCE_DIR}/projects/levels.h"
+        "${PROJECT_SOURCE_DIR}/projects/sound.h"
 
 )
 target_link_libraries(projects-dungeon PRIVATE raylib)

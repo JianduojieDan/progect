@@ -1,10 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "../../../.vcpkg-clion/vcpkg/installed/x64-windows/include/raylib.h"
+#include "raylib.h"
 
-#include "../../../../Default/Desktop/projects/globals.h"
-#include "../../../../Default/Desktop/projects/levels.h"
+#include "globals.h"
+#include "levels.h"
 
 void move_player(int dx, int dy) {
     int next_player_row = static_cast<int>(player_row) + dy;
@@ -27,8 +27,11 @@ void move_player(int dx, int dy) {
         } else if (cell == EXIT) {
             load_next_level();
             PlaySound(exit_sound);
+        }else if (cell == ENTRANCE){
+            PlaySound(entrance_sound);
+
         }
     }
 }
 
-#endif PLAYER_H
+#endif

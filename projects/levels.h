@@ -24,6 +24,7 @@ void load_next_level() {
     }
 
     derive_graphics_metrics_from_loaded_level();
+
 }
 
 #endif //LEVELS_H

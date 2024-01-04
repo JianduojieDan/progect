@@ -11,4 +11,5 @@ float rand_up_to(float to) {
     return rand_from_to(0.0f, to);
 }
 
+
 #endif // UTILITIES_H

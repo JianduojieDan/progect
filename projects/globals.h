@@ -67,7 +67,7 @@ level LEVEL_3 = {
 
 const size_t LEVEL_COUNT = 3;
 level LEVELS[LEVEL_COUNT] = {
-    LEVEL_1,LEVEL_2,LEVEL_3
+    LEVEL_1,LEVEL_2,LEVEL_3,
 };
 
 /* Loaded Level Data */
@@ -140,11 +140,12 @@ sprite coin_sprite;
 sprite player_sprite;
 
 /* Sounds */
-
-Sound coin_sound = LoadSound("data/sounds/coin.wav");
+Sound coin_sound;
 Sound exit_sound;
+Sound entrance_sound;
 
-//coin_sound = LoadSound("data/sounds/coin.wav");
+
+//coin_sound = LoadSound("../projects/data/sound/collectcoin-6075.wav");
 //exit_sound = LoadSound("data/sounds/exit.wav");
 
 /* Pause Text Parameters */
@@ -223,6 +224,9 @@ sprite load_sprite(
 void unload_sprite(sprite &sprite);
 void draw_sprite(sprite &sprite, float x, float y, float width, float height);
 void draw_sprite(sprite &sprite, float x, float y, float size);
+
+//SOUNDS
+inline void load_sound();
 
 // TODO: Add forward declarations of all your functions to avoid circular dependencies.
 
