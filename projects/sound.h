@@ -15,4 +15,5 @@ inline void load_sound(){
     entrance_sound = LoadSound("../projects/data/sounds/wood-door-slam-46791.wav");
 }
 
+
 #endif //SOUND_H

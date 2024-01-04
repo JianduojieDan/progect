@@ -12,4 +12,5 @@ float rand_up_to(float to) {
 }
 
 
+
 #endif // UTILITIES_H

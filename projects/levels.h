@@ -12,6 +12,7 @@ void load_next_level() {
         create_victory_menu_background();
     }
 
+
     level = LEVELS[level_index];
     for(size_t row = 0; row < level.rows; ++row) {
         for(size_t column = 0; column < level.columns; ++column) {

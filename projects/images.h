@@ -12,6 +12,7 @@ void load_fonts() {
     menu_font = LoadFont("../projects/data/fonts/ARCADECLASSIC.TTF");
 }
 
+
 void unload_fonts() {
     UnloadFont(menu_font);
 }

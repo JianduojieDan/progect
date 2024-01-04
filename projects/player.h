@@ -14,6 +14,7 @@ void move_player(int dx, int dy) {
           next_player_column >= 0 && next_player_column < level.columns)) {
         return;
     }
+
     char cell = level.data[next_player_row * level.columns + next_player_column];
     if (cell != WALL) {
         player_row = static_cast<size_t>(next_player_row);
