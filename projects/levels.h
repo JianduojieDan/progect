@@ -12,7 +12,6 @@ void load_next_level() {
         create_victory_menu_background();
     }
 
-
     level = LEVELS[level_index];
     for(size_t row = 0; row < level.rows; ++row) {
         for(size_t column = 0; column < level.columns; ++column) {
@@ -26,6 +25,12 @@ void load_next_level() {
 
     derive_graphics_metrics_from_loaded_level();
 
+}
+
+void load_LOSE_STATE() {
+    if (IsKeyPressed(KEY_B)) {
+        game_state = LOSE_STATE;
+    }
 }
 
 #endif //LEVELS_H

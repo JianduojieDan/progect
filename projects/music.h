@@ -9,6 +9,7 @@ using namespace std;
 inline void load_music(){
   Music  music = LoadMusicStream("../projects/data/music/8bit-music-for-game-68698.wav");
 
+
 }
 
 

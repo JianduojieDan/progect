@@ -272,6 +272,7 @@ sprite coin_sprite;
 sprite player_sprite;
 sprite diamond_sprite;
 
+
 /* Sounds */
 Sound coin_sound;
 Sound exit_sound;

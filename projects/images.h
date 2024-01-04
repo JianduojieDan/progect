@@ -12,7 +12,6 @@ void load_fonts() {
     menu_font = LoadFont("../projects/data/fonts/ARCADECLASSIC.TTF");
 }
 
-
 void unload_fonts() {
     UnloadFont(menu_font);
 }
@@ -28,6 +27,7 @@ void load_images() {
     exit_image     = LoadTexture("../projects/data/images/exit.png");
     coin_sprite    = load_sprite("../projects/data/images/coin/coin", ".png", 9);
     player_sprite  = load_sprite("../projects/data/images/player/player", ".png", 11);
+    diamond_sprite = load_sprite("../projects/data/diamond/diamond", ".png", 4);
 }
 
 void unload_images() {
@@ -37,6 +37,7 @@ void unload_images() {
     UnloadTexture(exit_image);
     unload_sprite(coin_sprite);
     unload_sprite(player_sprite);
+    unload_sprite(diamond_sprite);
 }
 
 void draw_image(Texture2D image, float x, float y, float size) {

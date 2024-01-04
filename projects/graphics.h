@@ -92,6 +92,10 @@ void draw_level() {
                     draw_image(floor_image, x, y, cell_size);
                     draw_sprite(coin_sprite, x, y, cell_size);
                     break;
+                case DIAMOND:
+                    draw_image(floor_image, x, y, cell_size);
+                    draw_sprite(diamond_sprite, x, y, cell_size);
+                    break;
                 default:
                     break;
             }
@@ -187,7 +191,6 @@ void draw_victory_menu_background() {
     Draw();
 }
 
-
 void draw_victory_menu() {
     DrawRectangle(
             0, 0,
@@ -217,6 +220,94 @@ void draw_victory_menu() {
             screen_height * 0.5f - subtitle_size.y * 0.5f + subtitle_y_shift
     };
     DrawTextEx(menu_font, subtitle, subtitle_position, subtitle_font_size, 1, VICTORY_SUBTITLE_COLOR);
+}
+
+
+
+#define NUM_BALL 1000
+
+struct BallS {
+    Vector2 position;
+    Vector2 velocity;
+    Vector2 previousPosition;
+    Color color;
+};
+
+Ball ballS[NUM_BALL];
+
+void InitS() {
+    for (int i = 0; i < NUM_BALL; i++) {
+        ballS[i].position.x = GetRandomValue(0, GetScreenWidth());
+        ballS[i].position.y = GetRandomValue(0, GetScreenHeight());
+        ballS[i].velocity.x = GetRandomValue(-1, 1);  // Adjusted speed ratio
+        ballS[i].velocity.y = GetRandomValue(-1, 1);  // Adjusted speed ratio
+        ballS[i].color = PINK;
+    }
+}
+
+void UpdateS() {
+    for (int i = 0; i < NUM_BALL; i++) {
+        ballS[i].previousPosition = ballS[i].position;
+        ballS[i].position.x += ballS[i].velocity.x;
+        ballS[i].position.y += ballS[i].velocity.y;
+
+        // Check for collisions with the screen edges
+        if (ballS[i].position.x < 0 || ballS[i].position.x > GetScreenWidth()) {
+            ballS[i].velocity.x = -ballS[i].velocity.x;
+        }
+        if (ballS[i].position.y < 0 || ballS[i].position.y > GetScreenHeight()) {
+            ballS[i].velocity.y = -ballS[i].velocity.y;
+        }
+    }
+}
+
+void DrawS() {
+    for (int i = 0; i < NUM_BALLS; i++) {
+        DrawCircleV(ballS[i].position, 3, ballS[i].color);  // Drawing the ball
+        DrawLineV(ballS[i].previousPosition, ballS[i].position, YELLOW);  // Drawing the tail in LIGHTGRAY
+    }
+}
+void animate_lose_menu_background() {
+    //TODO
+    InitS();
+    UpdateS();
+}
+
+
+void draw_lose_menu_background() {
+    //TODO
+    DrawS();
+}
+
+void draw_lose_menu() {
+    DrawRectangle(
+            0, 0,
+            static_cast<int>(screen_width), static_cast<int>(screen_height),
+            { 0, 0, 0, 10 }
+    );
+
+    animate_lose_menu_background();
+    draw_lose_menu_background();
+
+    const char *title = LOSE_TITLE.c_str();
+    const float title_font_size = LOSE_TITLE_FONT_SIZE * screen_scale;
+    const float title_y_shift   = LOSE_TITLE_Y_SHIFT   * screen_scale;
+    Vector2 title_size = MeasureTextEx(menu_font, title, title_font_size, 1);
+    Vector2 title_position = {
+            (screen_width - title_size.x) * 0.5f,
+            screen_height * 0.5f - title_size.y * 0.5f - title_y_shift
+    };
+    DrawTextEx(menu_font, title, title_position, title_font_size, 1, LOSE_TITLE_COLOR);
+
+    const char *subtitle = LOSE_SUBTITLE.c_str();
+    const float subtitle_font_size = LOSE_SUBTITLE_FONT_SIZE * screen_scale;
+    const float subtitle_y_shift   = LOSE_SUBTITLE_Y_SHIFT   * screen_scale;
+    Vector2 subtitle_size = MeasureTextEx(menu_font, subtitle, subtitle_font_size, 1);
+    Vector2 subtitle_position = {
+            (screen_width - subtitle_size.x) * 0.5f,
+            screen_height * 0.5f - subtitle_size.y * 0.5f + subtitle_y_shift
+    };
+    DrawTextEx(menu_font, subtitle, subtitle_position, subtitle_font_size, 1, LOSE_SUBTITLE_COLOR);
 }
 
 #endif // GRAPHICS_H

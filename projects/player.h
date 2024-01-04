@@ -2,7 +2,8 @@
 #define PLAYER_H
 
 #include "raylib.h"
-
+#include "sound.h"
+#include "music.h"
 #include "globals.h"
 #include "levels.h"
 
@@ -14,7 +15,6 @@ void move_player(int dx, int dy) {
           next_player_column >= 0 && next_player_column < level.columns)) {
         return;
     }
-
     char cell = level.data[next_player_row * level.columns + next_player_column];
     if (cell != WALL) {
         player_row = static_cast<size_t>(next_player_row);
@@ -25,12 +25,16 @@ void move_player(int dx, int dy) {
             player_score += POINTS_FOR_COIN;
             PlaySound(coin_sound);
             // play sounds
-        } else if (cell == EXIT) {
+        }else if (cell == DIAMOND) {
+            level.data[next_player_row * level.columns + next_player_column] = FLOOR;
+            player_score += POINTS_FOR_DIAMOND;
+            PlaySound(diamond_sound);
+        }
+        else if (cell == EXIT) {
             load_next_level();
             PlaySound(exit_sound);
         }else if (cell == ENTRANCE){
             PlaySound(entrance_sound);
-
         }
     }
 }
