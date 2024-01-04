@@ -143,14 +143,6 @@ add_executable(p1067 "${PROJECT_SOURCE_DIR}/ojmid/p1067.cpp")
 add_executable(p1070 "${PROJECT_SOURCE_DIR}/ojmid/p1070.cpp")
 add_executable(p1071 "${PROJECT_SOURCE_DIR}/ojmid/p1071.cpp")
 add_executable(p1072 "${PROJECT_SOURCE_DIR}/ojmid/p1072.cpp")
-add_executable(p1073 "${PROJECT_SOURCE_DIR}/ojmid/p1073.cpp")
-add_executable(p1074 "${PROJECT_SOURCE_DIR}/ojmid/p1074.cpp")
-add_executable(p1075 "${PROJECT_SOURCE_DIR}/ojmid/p1075.cpp")
-add_executable(p1076 "${PROJECT_SOURCE_DIR}/ojmid/p1076.cpp")
-add_executable(p1077 "${PROJECT_SOURCE_DIR}/ojmid/p1077.cpp")
-add_executable(p1078 "${PROJECT_SOURCE_DIR}/ojmid/p1078.cpp")
-add_executable(p1079 "${PROJECT_SOURCE_DIR}/ojmid/p1079.cpp")
-
 add_executable(p1172 "${PROJECT_SOURCE_DIR}/ojmid/p1172.cpp")
 add_executable(p1173 "${PROJECT_SOURCE_DIR}/ojmid/p1173.cpp")
 add_executable(p1174 "${PROJECT_SOURCE_DIR}/ojmid/p1174.cpp")
@@ -183,6 +175,8 @@ add_executable(
         "${PROJECT_SOURCE_DIR}/projects/utilities.h"
         "${PROJECT_SOURCE_DIR}/projects/levels.h"
         "${PROJECT_SOURCE_DIR}/projects/sound.h"
+        "${PROJECT_SOURCE_DIR}/projects/music.h"
+
 
 )
 target_link_libraries(projects-dungeon PRIVATE raylib)
