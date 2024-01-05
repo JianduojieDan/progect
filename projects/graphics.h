@@ -155,8 +155,8 @@ void Init() {
     for (int i = 0; i < NUM_BALLS; i++) {
         balls[i].position.x = GetRandomValue(0, GetScreenWidth());
         balls[i].position.y = GetRandomValue(0, GetScreenHeight());
-        balls[i].velocity.x = GetRandomValue(-3, 3);  // Adjusted speed ratio
-        balls[i].velocity.y = GetRandomValue(-3, 3);  // Adjusted speed ratio
+        balls[i].velocity.x = GetRandomValue(-3, 3);
+        balls[i].velocity.y = GetRandomValue(-3, 3);
         balls[i].color = WHITE;
     }
 }
@@ -179,8 +179,8 @@ void Update() {
 
 void Draw() {
     for (int i = 0; i < NUM_BALLS; i++) {
-        DrawCircleV(balls[i].position, 1, balls[i].color);  // Drawing the ball
-        DrawLineV(balls[i].previousPosition, balls[i].position, LIGHTGRAY);  // Drawing the tail in LIGHTGRAY
+        DrawCircleV(balls[i].position, 1, balls[i].color);
+        DrawLineV(balls[i].previousPosition, balls[i].position, LIGHTGRAY);
     }
 }
 
@@ -243,8 +243,8 @@ void InitS() {
     for (int i = 0; i < NUM_BALL; i++) {
         ballS[i].position.x = GetRandomValue(0, GetScreenWidth());
         ballS[i].position.y = GetRandomValue(0, GetScreenHeight());
-        ballS[i].velocity.x = GetRandomValue(-1, 1);  // Adjusted speed ratio
-        ballS[i].velocity.y = GetRandomValue(-1, 1);  // Adjusted speed ratio
+        ballS[i].velocity.x = GetRandomValue(-1, 1);
+        ballS[i].velocity.y = GetRandomValue(-1, 1);
         ballS[i].color = PINK;
     }
 }
@@ -267,8 +267,8 @@ void UpdateS() {
 
 void DrawS() {
     for (int i = 0; i < NUM_BALLS; i++) {
-        DrawCircleV(ballS[i].position, 3, ballS[i].color);  // Drawing the ball
-        DrawLineV(ballS[i].previousPosition, ballS[i].position, YELLOW);  // Drawing the tail in LIGHTGRAY
+        DrawCircleV(ballS[i].position, 3, ballS[i].color);
+        DrawLineV(ballS[i].previousPosition, ballS[i].position, YELLOW);
     }
 }
 void animate_lose_menu_background() {
