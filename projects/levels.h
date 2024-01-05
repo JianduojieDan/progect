@@ -3,6 +3,7 @@
 
 #include "globals.h"
 #include "graphics.h"
+#include "enemy.h"
 
 void load_next_level() {
     level_index++;

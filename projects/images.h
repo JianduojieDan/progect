@@ -28,13 +28,16 @@ void load_images() {
     coin_sprite    = load_sprite("../projects/data/images/coin/coin", ".png", 9);
     player_sprite  = load_sprite("../projects/data/images/player/player", ".png", 11);
     diamond_sprite = load_sprite("../projects/data/diamond/diamond", ".png", 4);
+    enemy_image = LoadTexture("../projects/data/images/enemy.png");
 }
+
 
 void unload_images() {
     UnloadTexture(wall_image);
     UnloadTexture(floor_image);
     UnloadTexture(entrance_image);
     UnloadTexture(exit_image);
+    UnloadTexture(enemy_image);
     unload_sprite(coin_sprite);
     unload_sprite(player_sprite);
     unload_sprite(diamond_sprite);

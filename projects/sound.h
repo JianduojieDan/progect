@@ -14,6 +14,7 @@ inline void load_sound(){
      exit_sound = LoadSound("../projects/data/sounds/wood-door-slam-46791.wav");
     entrance_sound = LoadSound("../projects/data/sounds/wood-door-slam-46791.wav");
     diamond_sound = LoadSound("../projects/data/sounds/scale-c6-106131.wav");
+    lose_sound = LoadSound("../projects/data/sounds/videogame-death-sound-43894.wav");
 }
 
 #endif //SOUND_H

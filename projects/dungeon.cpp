@@ -6,6 +6,7 @@
 #include "levels.h"
 #include "sound.h"
 #include "music.h"
+#include "enemy.h"
 // TODO
 
 void update_game() {
@@ -29,7 +30,7 @@ void update_game() {
                 game_state = PAUSED_STATE;
             }else if  (IsKeyPressed(KEY_B)) {
                 game_state = LOSE_STATE;
-            break;
+            }
         case PAUSED_STATE:
             if (IsKeyPressed(KEY_ESCAPE)) {
                 game_state = GAME_STATE;
@@ -50,8 +51,8 @@ void update_game() {
             }
             break;
     }
-    }
 }
+
 
 void draw_game() {
     game_frame++;

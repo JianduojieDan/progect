@@ -88,6 +88,10 @@ void draw_level() {
                     draw_image(floor_image, x, y, cell_size);
                     draw_image(exit_image, x, y, cell_size);
                     break;
+                case ENEMY:
+                    draw_image(floor_image, x, y, cell_size);
+                    draw_image(enemy_image, x, y, cell_size);
+                    break;
                 case COIN:
                     draw_image(floor_image, x, y, cell_size);
                     draw_sprite(coin_sprite, x, y, cell_size);

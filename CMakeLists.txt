@@ -176,6 +176,8 @@ add_executable(
         "${PROJECT_SOURCE_DIR}/projects/levels.h"
         "${PROJECT_SOURCE_DIR}/projects/sound.h"
         "${PROJECT_SOURCE_DIR}/projects/music.h"
+        "${PROJECT_SOURCE_DIR}/projects/enemy.h"
+
 
 
 )
