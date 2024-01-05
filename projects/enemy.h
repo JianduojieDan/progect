@@ -13,6 +13,7 @@ struct Enemy {
     EnemyState state;
 
 
+
     Enemy() : row(0), column(0), speed(1), health(100), state(IDLE) {}
 };
 void move_enemy(Enemy &enemy) {
