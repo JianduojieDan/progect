@@ -290,7 +290,6 @@ void draw_lose_menu() {
             { 0, 0, 0, 10 }
     );
 
-
     animate_lose_menu_background();
     draw_lose_menu_background();
 

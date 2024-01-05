@@ -68,7 +68,6 @@ void move_ball(Enemy &enemy) {
 
 
 
-
 void move_player(int dx, int dy) {
     int next_player_row = static_cast<int>(player_row) + dy;
     int next_player_column = static_cast<int>(player_column) + dx;

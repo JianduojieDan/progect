@@ -32,6 +32,7 @@ void load_images() {
 }
 
 
+
 void unload_images() {
     UnloadTexture(wall_image);
     UnloadTexture(floor_image);

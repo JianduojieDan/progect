@@ -78,7 +78,6 @@ void draw_game() {
     }
 }
 
-
 int main() {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT);
     InitWindow(2000, 1600, "Dungeon");
